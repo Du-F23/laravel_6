@@ -26,15 +26,17 @@ Route::delete('/users/{user}' ,'UserController@delete')->name('user.destroy');
 /* Categorias */
 
 Route::get('/category','CategoryController@index');
-Route::post('/categories','CategoryController@store')->name('category.store');
-Route::get('/categories/{$id}','CategoryController@edit')->name('category.edit');
-Route::delete('/categories/{category}','CategoryController@delete')->name('category.destroy');
+Route::post('/category','CategoryController@store')->name('category.store');
+Route::put('/category/{id}/update','CategoryController@update')->name('category.update');;
+Route::get('/category/{id}/edit','CategoryController@edit');
+Route::delete('/category/{category}','CategoryController@delete')->name('category.destroy');
 
 /* Articulos */
 
-// Route::get('/articles','ControllerArticle@index');
-// Route::post('/articles','ControllerArticle@store')->name('article.store');
-// Route::get('/articles/{$id}','ControllerArticle@show');
+Route::get('/articles','ControllerArticle@index');
+Route::get('/article/add','ControllerArticle@create');
+Route::post('/articles','ControllerArticle@store')->name('article.store');
+//Route::get('/articles/{$id}','ControllerArticle@show');
 
 /*  Images */
 
@@ -72,4 +74,4 @@ Route::get('enviar', ['as' => 'enviar', function () {
     Auth::routes();
 
 
-    Route::get('/articles','ArticleController@index');
+    Route::get('/articles/add','ArticleController@index');

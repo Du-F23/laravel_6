@@ -2,13 +2,14 @@
 
 namespace App\Http\Controllers;
 use App\Article;
+use App\Category;
 use Illuminate\Http\Request;
 
 class ControllerArticle extends Controller
 {
     public function __construct()
     {
-        $this->middleware('auth');
+        $this->middleware(['auth','verified']);
     }
     /**
      * Display a listing of the resource.
@@ -32,7 +33,9 @@ class ControllerArticle extends Controller
      */
     public function create()
     {
-        //
+        $categories = Category::all();
+        //return $categories;
+        return view('Articles.add', ["categories" => $categories]);
     }
 
     /**
@@ -64,7 +67,7 @@ class ControllerArticle extends Controller
      */
     public function show($id)
     {
-        //obtines el article 
+        //obtines el article
         $article = Article::find($id);
 
         return $article;

@@ -9,7 +9,7 @@
                 <th>Clave</th>
                 <th>nombre</th>
                 <th>Opciones</th>
-                </tr>  
+                </tr>
             </thead>
             <tbody>
                 @foreach($articles as $article)
@@ -18,12 +18,12 @@
                     <td>{{$article->title}}</td>
                     <td>
                         <button type='button' class="btn btn-primary"><i class="far fa-eye"></i></button>
-                        <button type='button' class="btn btn-success"><i class="fas fa-pen-square"></i></button>
+                        <button type='button' class="btn btn-success"><i class="fas fa-pen-square"> <a type='button' href="{{route('article.edit',$articles->id)}}"></a> </i></button>
                         <button type='submit' class="btn btn-danger"
                         onClick="return confirm('estas seguro  a eliminar el registro?')"><i class="far fa-trash-alt"></i></button>
-                       {{--  <input 
+                       {{--  <input
                           type="submit"
-                          value="Eliminar" 
+                          value="Eliminar"
                           class="btn btn-sm btn-danger"
                           onClick="return confirm('estas seguro  a eliminar el registro?')">
                            --}}
@@ -34,5 +34,5 @@
 
         </table>
     </div>
-</div> 
+</div>
 @endsection
