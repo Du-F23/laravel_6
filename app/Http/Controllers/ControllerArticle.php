@@ -70,19 +70,21 @@ class ControllerArticle extends Controller
     public function show($id)
     {
         //obtines el article
-        $article = Article::find(id);
+        $categoria= Category::find($id);
+        $article = Article::find($id);
 
         return $article;
 
-        return view('Articles.edit',[
-            '$articel' => $article
+        return view('article.edit',[
+            '$articel' => $article,
+            '$categoria' => $categorias
         ]);
 
     }
 
     public function edit($id)
     {
-         $article = Article::findOrFail(id);
+         $article = Article::findOrFail($id);
             //return $article;
             //printr ($article);
             return view('Articles.show',['article'=>$article]);
