@@ -70,7 +70,7 @@ class ControllerArticle extends Controller
     public function show($id)
     {
         //obtines el article
-        $article = Article::find($id);
+        $article = Article::find(id);
 
         return $article;
 
@@ -82,7 +82,7 @@ class ControllerArticle extends Controller
 
     public function edit($id)
     {
-         $article = Article::findOrFail($id);
+         $article = Article::findOrFail(id);
             //return $article;
             //printr ($article);
             return view('Articles.show',['article'=>$article]);

@@ -28,28 +28,6 @@
                             </div>
                         </div>
                         <div class="row">
-                            <label for="category_id" class="col-sm-2 col-form-label">Categoría</label>
-                            <div class="col-sm-7">
-                                <select class="form-group bmd-form-group" name="category_id" id="category_id">
-                                    <option selected value="">Selecciona</option>
-                                    @foreach($categorias as $categoria)
-                                    <option value="{!! $categoria->id !!}">{{ $categoria->name }}</option>
-                                    @endforeach
-                                </select>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <label for="img_id" class="col-sm-2 col-form-label">Imagen</label>
-                            <div class="col-sm-7">
-                                <select class="form-group bmd-form-group" name="img_id" id="img_id">
-                                    <option selected value="">Selecciona</option>
-                                    @foreach($imagenes as $imagen)
-                                    <option value="{!! $imagen->id !!}">{{ $imagen->name }}</option>
-                                    @endforeach
-                                </select>
-                            </div>
-                        </div>
-                        <div class="row">
                             <textarea class="content" id="body" name="body"></textarea>
                         </div>
                     </div>
@@ -59,6 +37,28 @@
         <div class="col-4">
             <div class="card-footer ml-auto mr-auto">
                 <button type="button" id="btn-guardar" class="btn btn-primary">guardar</button>
+                <div class="card-footer ml-auto mr-auto">
+                    <label for="category_id" class="col-sm-2 col-form-label">Categoría</label>
+                    <div class="col-sm-7">
+                        <select class="form-group bmd-form-group" name="category_id" id="category_id">
+                            <option selected value="">Selecciona</option>
+                            @foreach($categorias as $categoria)
+                            <option value="{!! $categoria->id !!}">{{ $categoria->name }}</option>
+                            @endforeach
+                        </select>
+                    </div>
+                </div>
+                <div class="card-footer ml-auto mr-auto">
+                    <label for="img_id" class="col-sm-2 col-form-label">Imagen</label>
+                    <div class="col-sm-8">
+                        <select class="form-group bmd-form-group" name="img_id" id="img_id">
+                            <option selected value="">Selecciona</option>
+                            @foreach($imagenes as $imagen)
+                            <option value="{!! $imagen->id !!}">{{ $imagen->name }}</option>
+                            @endforeach
+                        </select>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
