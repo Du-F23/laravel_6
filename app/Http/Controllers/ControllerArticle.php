@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 use App\Article;
 use App\Category;
+use App\Images;
 use Illuminate\Http\Request;
 
 class ControllerArticle extends Controller
@@ -19,8 +20,8 @@ class ControllerArticle extends Controller
     public function index()
     {
 
-        $articles = Article::all();
-        return view('articles.index',[
+        $articles = Article::latest()->paginate(20);
+        return view('Articles.index',[
             'articles'=> $articles
             ]);
 
@@ -33,9 +34,10 @@ class ControllerArticle extends Controller
      */
     public function create()
     {
-        $categories = Category::all();
-        //return $categories;
-        return view('Articles.add', ["categories" => $categories]);
+        $article = new Article;
+        $categorias = Category::select('id', 'name')->orderBy('name')->get();
+        $imagenes = Images::select('id', 'name')->orderBy('name')->get();
+        return view('article.form', compact('article', 'categorias', 'imagenes'));
     }
 
     /**
@@ -72,33 +74,31 @@ class ControllerArticle extends Controller
 
         return $article;
 
-        return view('article.show',[
+        return view('Articles.edit',[
             '$articel' => $article
         ]);
 
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
     public function edit($id)
     {
-        //
+         $article = Article::findOrFail($id);
+            //return $article;
+            //printr ($article);
+            return view('Articles.show',['article'=>$article]);
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
+
     public function update(Request $request, $id)
     {
-        //
+        $article = Article::findOrFail($id);
+
+            $article->update($request->all());
+
+            //return back();
+
+            return redirect('/articles')->with('mesageUpdate', 'la categoria se ha modificado exitosamente!');
+
     }
 
     /**

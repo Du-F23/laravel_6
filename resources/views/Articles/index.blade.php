@@ -18,7 +18,7 @@
                     <td>{{$article->title}}</td>
                     <td>
                         <button type='button' class="btn btn-primary"><i class="far fa-eye"></i></button>
-                        <button type='button' class="btn btn-success"><i class="fas fa-pen-square"> <a type='button' href="{{route('article.edit',$articles->id)}}"></a> </i></button>
+                        <a type='button' href="/article/{{$article->id}}/edit"><button type='button' class="btn btn-success"><i class="fas fa-pen-square"></i></button></a>
                         <button type='submit' class="btn btn-danger"
                         onClick="return confirm('estas seguro  a eliminar el registro?')"><i class="far fa-trash-alt"></i></button>
                        {{--  <input
@@ -33,6 +33,7 @@
             </tbody>
 
         </table>
+        {{$articles->links()}}
     </div>
 </div>
 @endsection

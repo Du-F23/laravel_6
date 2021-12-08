@@ -1,5 +1,5 @@
 @extends('layouts.app')
-
+<title> DSM 43</title>
 @section('content')
 <main class="main-content  mt-0">
     <div class="page-header align-items-start min-vh-100" style="background-image: url('https://images5.alphacoders.com/968/968864.png');">

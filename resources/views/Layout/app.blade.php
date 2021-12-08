@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <!-- Boostrap v5.0 
+    <!-- Boostrap v5.0
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">-->
     <!-- FoontAwesome v6 .0 -->
     <!--     Fonts and icons     -->
@@ -23,7 +23,7 @@
     <link rel="stylesheet" href="{!! asset('css/richtext.min.css') !!}">
     <script src="{!! asset('js/jquery-3.6.0.min.js') !!}"></script>
     <script src="{!! asset('js/jquery.richtext.min.js') !!}"></script>
-    <title>Wordpres Laravel</title>
+    <title>Laravel</title>
 </head>
 <body class="g-sidenav-show  bg-gray-200">
 
@@ -37,7 +37,7 @@
 
     <!-- Optional JavaScript; choose one of the two! -->
 
-    <!-- Option 1: Bootstrap Bundle with Popper 
+    <!-- Option 1: Bootstrap Bundle with Popper
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>-->
 
     <!-- Option 2: Separate Popper and Bootstrap JS -->
@@ -45,7 +45,7 @@
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
     -->
- 
+
      <!--   Core JS Files   -->
   <script src={{{url('assets/js/core/popper.min.js')}}}></script>
   <script src={{{url('assets/js/core/bootstrap.min.js')}}}></script>
@@ -78,6 +78,6 @@
         myModal.addEventListener('shown.bs.modal', function () {
           myInput.focus()
       })
- 
+
 </body>
 </html>

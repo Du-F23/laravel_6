@@ -1,4 +1,5 @@
 @extends('Layout/app')
+
 @section('content')
 <div class="container">
     <div class="row">
@@ -61,7 +62,7 @@
             </div>
         </div>
     </div>
-</div> 
+</div>
 <script>
     // hacemos que el control body sea texto enriquecido
     $('#body').richText();

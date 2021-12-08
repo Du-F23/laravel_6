@@ -64,7 +64,10 @@ class ArticleController extends Controller
      */
     public function edit($id)
     {
-        //
+        $article = Article::findOrFail($id);
+            // return $article;
+            // printr ($article);
+            return view('article.form',['article'=>$article]);
     }
 
     /**

@@ -36,7 +36,7 @@ Route::delete('/category/{category}','CategoryController@delete')->name('categor
 Route::get('/articles','ControllerArticle@index');
 Route::get('/article/add','ControllerArticle@create');
 Route::post('/articles','ControllerArticle@store')->name('article.store');
-//Route::get('/articles/{$id}','ControllerArticle@show');
+Route::get('/article/{$id}/edit','ControllerArticle@edit');
 
 /*  Images */
 
