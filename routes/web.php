@@ -22,6 +22,8 @@ Route::get('/users','UserController@index');
 Route::post('/users', 'UserController@store')->name('user.store');
 /* Delete elima datos */
 Route::delete('/users/{user}' ,'UserController@delete')->name('user.destroy');
+Route::get('/users/{id}/edit', 'UserController@edit')->name('user.edit');
+Route::put('/users/{id}/update','UserController@update')->name('user.update');;
 
 /* Categorias */
 

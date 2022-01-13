@@ -12,7 +12,7 @@
  <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
  <!-- CSS Files -->
  <link id="pagestyle" href="{{{url('assets/css/material-dashboard.css')}}}?v=3.0.0" rel="stylesheet" />
-    <!-- CSRF Token --> 
+    <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <title>{{ config('app.name', 'Laravel') }}</title>
@@ -38,14 +38,14 @@
                 </button> --}}
 
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <!-- Left Side Of Navbar 
+                    <!-- Left Side Of Navbar
                     <ul class="navbar-nav mr-auto">
 
                     </ul>-->
 
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ml-auto">
-                        <!-- Authentication Links 
+                        <!-- Authentication Links
                         @guest
                             <li class="nav-item">
                                 <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
@@ -99,6 +99,6 @@
     <!-- Github buttons -->
     <script async defer src="https://buttons.github.io/buttons.js"></script>
     <!-- Control Center for Material Dashboard: parallax effects, scripts for the example pages etc -->
-    <script src="{{{url('assets/js/material-dashboard.min.js?v=3.0.0')}}}></script>
+    <script src="{{{url('assets/js/material-dashboard.min.js?v=3.0.0')}}}"></script>
 </body>
 </html>

@@ -10,7 +10,7 @@ class UserController extends Controller
 
     public function __construct()
     {
-        $this->middleware('auth');
+        $this->middleware(['auth','verified']);
     }
 /* metod index user */
     public function index(){
@@ -34,4 +34,17 @@ class UserController extends Controller
 
     }
 
+    public function edit($id){
+        $users=User::findOrFail($id);
+        return view('users.edit',['users'=>$users]);
+    }
+
+
+    public function update(Request $request, $id){
+        $users=User::findOrFail($id);
+
+        $users->update($request->all());
+
+        return redirect('/users')->with('mesageUpdate', 'El usuario se a modificado correctamente!');
+    }
 }

@@ -1,3 +1,4 @@
+<title>DSM 43</title>
 @extends('Layout/app')
 @section('content')
 <!-- Start Cards -->
@@ -28,7 +29,7 @@
           </div>
           <div class="text-end pt-1">
             <p class="text-sm mb-0 text-capitalize">Total De Usuarios</p>
-            <h4 class="mb-0">{{$users}}            
+            <h4 class="mb-0">{{$users}}
           </h4>
           </div>
         </div>
@@ -75,4 +76,3 @@
   </div>
 <!-- End Cards-->
 @endsection
-  
